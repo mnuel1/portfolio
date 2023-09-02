@@ -4,6 +4,7 @@
 'primary': '#6e7281',
 'secondary': '#d0cfc8',
 'accent': '#5e616e', */
+
 * {
     /* font-family: 'Poppins', sans-serif; */
     color: #1c1b17;
@@ -11,3 +12,19 @@
     
 }
 
+.line-numbers {
+    display: inline-block;
+    text-align: right;
+    padding: 0 10px;
+    user-select: none;
+    color: white; /* Line number color */
+}
+
+.numbered-textarea {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+    border: 1px solid #ccc; /* Textarea border */
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+}

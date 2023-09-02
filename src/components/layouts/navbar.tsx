@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Cross as Hamburger } from 'hamburger-react'
 
-
+import Switch from "../widgets/switch";
 import '../../assets/css/font.css';
 
 
@@ -37,11 +37,13 @@ function NavigationBar() {
         </div>
         <div className="flex px-10 lg:px-20 py-5 w-full gap-4 fixed z-50 justify-between">
             <div className="w-16 h-17 flex items-center justify-center rounded-l-full" >
-               <h1 className="text-black">man</h1>
+                <img src="src\assets\icon.png" style={{width:'100%', height:"100%"}} alt="icon" />
+                <h1 className="text-black text-2xl">man</h1>
             </div>
             <div className="text-2xl">
                 <Hamburger rounded onToggle={toggleNavBar} />
             </div>        
+            <Switch/>
         </div>
         
         </>

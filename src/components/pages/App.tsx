@@ -4,7 +4,7 @@ import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
 import NavigationBar from '../layouts/navbar';
 import Home from './Home';
 import About from './About';
-import Services from './Services';
+
 import { FooterWithSitemap } from './Footer';
 import '../../index.css'
 
@@ -36,7 +36,7 @@ function App () {
             </ParallaxLayer>
             
             <ParallaxLayer
-                offset={0.9}
+                offset={1}
                 speed={0.1}
                 // onClick={() => parallax.current.scrollTo(2)}
                 style={{
@@ -47,7 +47,7 @@ function App () {
             >
                 <About/>
             </ParallaxLayer>
-            <ParallaxLayer
+            {/* <ParallaxLayer
                 offset={1.2}
                 speed={0.1}
                 // onClick={() => parallax.current.scrollTo(2)}
@@ -58,7 +58,7 @@ function App () {
                 }}
             >
                 <Services/>
-            </ParallaxLayer>
+            </ParallaxLayer> */}
             <ParallaxLayer
                 offset={2}
                 speed={0.1}
@@ -66,8 +66,7 @@ function App () {
                 style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'center',
-                    border: '1px solid green',
+                    justifyContent: 'center',                    
                 }}
             >
                 <FooterWithSitemap/>
