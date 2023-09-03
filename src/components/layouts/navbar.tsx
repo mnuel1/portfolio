@@ -8,7 +8,7 @@ import '../../assets/css/font.css';
 function NavigationBar() {
 
     const [isOpen, setOpen] = useState(true);
-
+    
     // Function to toggle mobile menu visibility
     const toggleNavBar = () => {
         setOpen(!isOpen);
@@ -35,15 +35,16 @@ function NavigationBar() {
             </ul>
             </div>
         </div>
-        <div className="flex px-10 lg:px-20 py-5 w-full gap-4 fixed z-50 justify-between">
-            <div className="w-16 h-17 flex items-center justify-center rounded-l-full" >
-                <img src="src\assets\icon.png" style={{width:'100%', height:"100%"}} alt="icon" />
-                <h1 className="text-black text-2xl">man</h1>
+        <div className="flex px-10 lg:px-20 py-3 w-full gap-4 fixed z-50 justify-between drop-shadow-2xl" style={{backgroundColor:'#fdfdfc'}}>
+            <div className="w-16 h-17 flex items-center justify-center rounded-l-full hover:cursor-pointer" >
+                
+                <img src="src\assets\icon.png" className="w-1/2 md:w-11/12 lg:w-full"alt="icon" />
+                <h1 className="text-black text-md md:text-xl lg:text-2xl">man</h1>
             </div>
-            <div className="text-2xl">
+            <div className="flex items-center justify-center ">
                 <Hamburger rounded onToggle={toggleNavBar} />
             </div>        
-            <Switch/>
+            <div className="flex items-center justify-center "><Switch/></div>
         </div>
         
         </>

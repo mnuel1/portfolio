@@ -28,11 +28,11 @@ function About () {
     }
     return (
         <>        
-            <div className="px-7 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-16">            
+            <div className="px-7 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8">            
                 <div className="flex flex-col items-center p-2">
                     <h1 className="align-left w-full text-5xl lg:text-9xl mb-5"> About Me </h1>
                     <p className="text-justify w-full px-3 text-sm md:text-xl lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut nobis distinctio totam minus numquam, reiciendis nam odit iure itaque, in mollitia? Beatae maiores eos voluptatem magni error. Eos, aperiam.</p>
-                    <div className="flex w-full p-2 mt-10 ">                        
+                    {/* <div className="flex w-full p-2 mt-10 ">                        
                         <div className="flex flex-col lg:flex-row w-full gap-4">
                             <div className="flex flex-col gap-8">
                                 <p className="text-xl text-white">Front-end Technology</p>
@@ -60,7 +60,7 @@ function About () {
                                 </div> 
                             </div>
                         </div>                                         
-                    </div>
+                    </div> */}
                 </div>
                 <div className="flex flex-col">
                     <div className="w-full flex gap-4 shadow-md items-center" style={{backgroundColor:'#24292e'}}>

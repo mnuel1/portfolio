@@ -1,98 +1,54 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import Typewriter from './writer';
 
 const NumberedTextArea: React.FC = () => {
-  const [counter, setCounter] = useState(2);
-  const [text, setText] = useState<string>('1  ');
-  const [cursorPosition, setCursorPosition] = useState<number | null>(null);
-
-  const textAreaRef = useRef<HTMLTextAreaElement | null>(null);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === 'Enter' && textAreaRef.current) {
-        e.preventDefault();
-        e.stopPropagation();
-        const start = textAreaRef.current.selectionStart;
-        const end = textAreaRef.current.selectionEnd;
-        const newText = `${text.substring(0, start)}\n${counter} ${text.substring(end)}`;
-        setText(newText);
-        setCounter((prevCounter) => prevCounter + 1);
-        setCursorPosition(start + 3);
-        textAreaRef.current.setSelectionRange(start + 3, start + 3);
-      }
-    };
-
-    if (textAreaRef.current) {
-      textAreaRef.current.addEventListener('keydown', handleKeyDown);
-    }
-
-    return () => {
-      if (textAreaRef.current) {
-        textAreaRef.current.removeEventListener('keydown', handleKeyDown);
-      }
-    };
-  }, [counter, text]);
-
-  useEffect(() => {
-    if (cursorPosition !== null && textAreaRef.current) {
-      textAreaRef.current.setSelectionRange(cursorPosition, cursorPosition);
-    }
-  }, [cursorPosition]);
-
-  const handleTextareaChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setText(e.target.value);
-  };
-
-  const handleTextareaClick = () => {
-    if (textAreaRef.current) {
-      const cursorPos = textAreaRef.current.selectionStart;
-      setCursorPosition(cursorPos);
-    }
-  };
-
-  const style = {
-    height: '100%',
-    width: '100%',
-    backgroundColor: '#24292e',
-    color: 'white',
-    padding: '20px',
-    outline: 'none'
+    const [counter, setCounter] = useState(0);
     
-  };
+    const text = ` `;
+    const maxCharsPerLine = 80; // Set your character limit per line
+    
+    
+    const splitTextIntoLines = (text: string, maxCharsPerLine: number) => {
+        const lines = [];
+        let currentLine = '';
+        const words = text.split(' ');
 
-  return (
-    <div style={{ display: 'flex', height: '100%', width:'100%'}}>
-      <div
-        style={{
-          width: '40px',
-        //   backgroundColor: '#333',
-          padding: '20px 10px',
-        }}
-      >
-        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-          {text.split('\n').map((_, index) => (
-            <div
-              key={index}
-              style={{
-                color: cursorPosition === index ? '#fff' : '#273546',
-                fontWeight: cursorPosition === index ? 'bold' : 'normal',
-              }}
-            >
-              {index + 1}
+        for (const word of words) {
+            if (currentLine.length + word.length <= maxCharsPerLine) {
+                currentLine += word + ' ';
+            } else {
+                lines.push(currentLine.trim());
+                currentLine = word + ' ';
+            }
+        }
+        if (currentLine) {
+            lines.push(currentLine.trim());
+        }
+        return lines;
+    };    
+    const lines = splitTextIntoLines(text, maxCharsPerLine);
+
+    return (
+        <div className="max-h-96 overflow-auto" style={{ display: 'flex', width: '100%' }}>
+            <div style={{ width: '40px', backgroundColor: '#333', padding: '20px 10px', height:"max-content", }} >
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                    {lines.map((_, index) => (
+                        <div key={index}
+                            style={{
+                                color: counter === index ? '#fff' : 'gray',
+                                fontWeight: counter === index ? 'bold' : 'normal',
+                            }}
+                        >
+                            {index + 1}
+                        </div>
+                    ))}
+                </div>
             </div>
-          ))}
+            <div className="items-center w-full" style={{ padding: '20px 10px' }}>
+                <Typewriter text={text} delay={1} infinite={true} />
+            </div>
         </div>
-      </div>
-      <textarea
-        ref={textAreaRef}
-        value={text}
-        // onKeyDown={handleTextareaChange}
-        onChange={handleTextareaChange}
-        onClick={handleTextareaClick}
-        style={style}
-      />
-    </div>
-  );
+    );
 };
 
 export default NumberedTextArea;
