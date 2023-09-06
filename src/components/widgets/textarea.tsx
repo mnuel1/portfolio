@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Typewriter from './writer';
 
 const NumberedTextArea: React.FC = () => {
-    const [counter, setCounter] = useState(0);
+    const [counter] = useState(0);
     
     const text = ` `;
     const maxCharsPerLine = 80; // Set your character limit per line

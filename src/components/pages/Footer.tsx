@@ -1,4 +1,4 @@
-import loadTransition from "../widgets/loadtransition";
+// import loadTransition from "../widgets/loadtransition";
 
 import { Typography } from "@material-tailwind/react";
 import '../../assets/css/animation.css';

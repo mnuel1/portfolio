@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 import NumberedTextArea from "../widgets/textarea";
 
@@ -6,26 +6,26 @@ import '../../assets/css/font.css';
 
 function About () {
     
-    const frontend = [
-        { title: 'React' },
-        { title: 'HTML' },
-        { title: 'Tailwind CSS' },
-    ];
+    // const frontend = [
+    //     { title: 'React' },
+    //     { title: 'HTML' },
+    //     { title: 'Tailwind CSS' },
+    // ];
       
-    const backend = [
-        { title: 'PHP' },
-        { title: 'Node.js' }, 
+    // const backend = [
+    //     { title: 'PHP' },
+    //     { title: 'Node.js' }, 
     
-    ];
+    // ];
       
-    const desktopapps = [
-        { title: 'C/C++' },
-        { title: 'Java' }, 
-        { title: 'Python' }, 
-    ];
-    const bg = {
-        backgroundColor:"#d9b854"
-    }
+    // const desktopapps = [
+    //     { title: 'C/C++' },
+    //     { title: 'Java' }, 
+    //     { title: 'Python' }, 
+    // ];
+    // const bg = {
+    //     backgroundColor:"#d9b854"
+    // }
     return (
         <>        
             <div className="px-7 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8">            

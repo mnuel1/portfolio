@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import App from './src/components/pages/App.tsx'
+import App from './src/components/pages/App'
 import './src/index.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
