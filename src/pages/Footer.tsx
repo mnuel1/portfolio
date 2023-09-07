@@ -1,8 +1,8 @@
 // import loadTransition from "../widgets/loadtransition";
 
 import { Typography } from "@material-tailwind/react";
-import '../../assets/css/animation.css';
-import '../../assets/css/font.css';
+import '../css/animation.css';
+import '../css/tailwind.css';
 const SITEMAP = [
     {
         title: "Menu",
@@ -23,7 +23,7 @@ const SITEMAP = [
  
 const currentYear = new Date().getFullYear();
  
-export function FooterWithSitemap() {
+function Footer() {
     
     return (        
         <footer className={`relative w-full`}>            
@@ -99,3 +99,5 @@ export function FooterWithSitemap() {
         </footer>      
     );
 }
+
+export default Footer;

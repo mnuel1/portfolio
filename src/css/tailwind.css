@@ -1,0 +1,81 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@600&family=Poppins&display=swap');
+
+
+/* COLOR PALLETE */
+:root {
+    --text: #1c1b17;
+    --background: #fdfdfc;
+    --primary:#6e7281;
+    --secondary:#d0cfc8;
+    --accent:#5e616e;
+}
+* {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+
+        
+}
+
+/* Hide default scrollbars */
+::-webkit-scrollbar {
+    width: 5px; /* Width of vertical scrollbar */
+    height: 5px; /* Height of horizontal scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Track background color */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #313131; /* Scrollbar thumb color */
+    border-radius: 6px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #202020; /* Scrollbar thumb color on hover */
+  }
+  
+  /* Horizontal scrollbar */
+  ::-webkit-scrollbar-thumb:horizontal {
+    max-width: 5px;
+  }
+  
+  /* Horizontal scrollbar track */
+  ::-webkit-scrollbar-track:horizontal {
+    background: #f1f1f1;
+    border-radius: 6px;
+  }
+  
+  /* Horizontal scrollbar thumb */
+  ::-webkit-scrollbar-thumb:horizontal {
+    background: #313131;
+    border-radius: 6px;
+  }
+  
+  /* Horizontal scrollbar thumb on hover */
+  ::-webkit-scrollbar-thumb:horizontal:hover {
+    background: #202020;
+  }
+  
+
+.line-numbers {
+    display: inline-block;
+    text-align: right;
+    padding: 0 10px;
+    user-select: none;
+    color: white; /* Line number color */
+}
+
+.numbered-textarea {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+    border: 1px solid #ccc; /* Textarea border */
+    width: 300px; /* Adjust as needed */
+    height: 200px; /* Adjust as needed */
+}

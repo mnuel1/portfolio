@@ -1,78 +1,26 @@
-// import { useState } from "react";
-
+// import {CarouselCustomNavigation} from '../widgets/Carousel';
+// import loadTransition from '../widgets/loadTransition';
 import NumberedTextArea from "../widgets/textarea";
+import '../css/tailwind.css'
+import '../css/animation.css'
 
-import '../../assets/css/font.css';
-
-function About () {
+const Work = () => {
     
-    // const frontend = [
-    //     { title: 'React' },
-    //     { title: 'HTML' },
-    //     { title: 'Tailwind CSS' },
-    // ];
-      
-    // const backend = [
-    //     { title: 'PHP' },
-    //     { title: 'Node.js' }, 
+    // const isLoaded = loadTransition(200)
     
-    // ];
-      
-    // const desktopapps = [
-    //     { title: 'C/C++' },
-    //     { title: 'Java' }, 
-    //     { title: 'Python' }, 
-    // ];
-    // const bg = {
-    //     backgroundColor:"#d9b854"
-    // }
     return (
-        <>        
-            <div className="px-7 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8">            
-                <div className="flex flex-col items-center p-2">
-                    <h1 className="align-left w-full text-5xl lg:text-9xl mb-5"> About Me </h1>
-                    <p className="text-justify w-full px-3 text-sm md:text-xl lg:text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam ut nobis distinctio totam minus numquam, reiciendis nam odit iure itaque, in mollitia? Beatae maiores eos voluptatem magni error. Eos, aperiam.</p>
-                    {/* <div className="flex w-full p-2 mt-10 ">                        
-                        <div className="flex flex-col lg:flex-row w-full gap-4">
-                            <div className="flex flex-col gap-8">
-                                <p className="text-xl text-white">Front-end Technology</p>
-                                <div className="flex lg:flex-row gap-4 ">
-                                    {frontend.map(({title: item}) => (
-                                        <div className="w-max px-3 py-1 rounded-xl whitespace-nowrap font-bold" style={bg}> {item} </div>
-                                    ))}
-                                    
-                                </div> 
-                            </div>
-                            <div className="flex flex-col gap-8">
-                            <p className="text-xl text-white">Back-end Technology</p>
-                                <div className="flex  lg:flex-row gap-4 ">
-                                    {backend.map(({title: item}) => (
-                                        <div className="w-max px-3 py-1 rounded-xl whitespace-nowrap font-bold" style={bg}> {item} </div>
-                                    ))}
-                                </div> 
-                            </div>
-                            <div className="flex flex-col gap-8">
-                            <p className="text-xl text-white">Desktop Development</p>
-                                <div className="flex lg:flex-row gap-4 ">
-                                    {desktopapps.map(({title: item}) => (
-                                        <div className="w-max px-3 py-1 rounded-xl whitespace-nowrap font-bold" style={bg}> {item} </div>
-                                    ))}
-                                </div> 
-                            </div>
-                        </div>                                         
-                    </div> */}
-                </div>
-                <div className="flex flex-col">
+        <section id="work" className="h-screen flex items-center justify-center">
+            {/* IDE */}
+            <div className="flex flex-col w-full border-4">
                     <div className="w-full flex gap-4 shadow-md items-center" style={{backgroundColor:'#24292e'}}>
                         <div className="flex gap-4 px-4 py-2">
                             <div className="w-4 h-4 rounded-full bg-red-500 hover:bg-red-700 hover:cursor-pointer" ></div>
                             <div className="w-4 h-4 rounded-full bg-yellow-500 hover:bg-yellow-700 hover:cursor-pointer"></div>
-                            <div className="w-4 h-4 rounded-full bg-green-500 hover:bg-green-700 hover:cursor-pointer"></div>
-                            
-                            
+                            <div className="w-4 h-4 rounded-full bg-green-500 hover:bg-green-700 hover:cursor-pointer"></div>                            
                         </div>
                         <h1 className="font-medium text-white text-sm"> Code Editor </h1>
                     </div>
+                    {/* PAGE TAB */}
                     <div className="flex items-center border-r-2 border-l-2 border-t-2 h-9 border-slate-900" style={{backgroundColor:'#1f2428'}}>
                         <div className="flex items-center px-5 py-1 border-t-2 gap-4 hover:cursor-pointer" style={{backgroundColor:'#24292e'}}>
                             <div className="flex items-center ">
@@ -81,6 +29,7 @@ function About () {
                             <p className="text-white text-sm">README.md</p>
                         </div>                                                
                     </div>
+                    {/* BREADCRUMBS */}
                     <div className="flex items-center border-2 px-5 h-5 py-3  border-slate-900 drop-shadow-2xl shadow-2xl" style={{backgroundColor:'#24292e'}}>
                         <div className="flex items-center justify-center gap-2"> 
                             <span className="text-gray-400 text-xs hover:text-white hover:cursor-pointer">portfolio</span>
@@ -92,20 +41,13 @@ function About () {
                                 README.md</span>                            
                         </div>                        
                     </div>
-                    <div className="flex h-full overflow-auto" style={{backgroundColor:'#24292e'}}>
-                        
-                            <NumberedTextArea/>
-                        
-
+                    {/* CONTENT */}
+                    <div className="flex h-full overflow-auto" style={{backgroundColor:'#24292e'}}>                        
+                        <NumberedTextArea/>                    
                     </div>
                 </div>
-                
-            </div>
-            
-        
-        </>
+        </section>
     );
-}
+};
 
-
-export default About;
+export default Work;

@@ -14,10 +14,16 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay }) => {
         let timeout: number;
     
         if (currentIndex <= text.length - 1) {
-        timeout = setTimeout(() => {
-            setCurrentText(prevText => prevText + text[currentIndex]);
-            setCurrentIndex(prevIndex => prevIndex + 1);
-        }, delay);
+            timeout = setTimeout(() => {
+                if (text[currentIndex] === '\n') {
+                    setCurrentText((prevText) => prevText + '<br />');                                   
+                } else if (text[currentIndex] === '\t') {
+                    setCurrentText((prevText) => prevText + '\t'); 
+                }else {
+                    setCurrentText((prevText) => prevText + text[currentIndex]);
+                }
+                setCurrentIndex(prevIndex => prevIndex + 1);
+            }, delay);
         
         }
         // } else if (infinite) {
@@ -28,7 +34,7 @@ const Typewriter: React.FC<TypewriterProps> = ({ text, delay }) => {
         return () => clearTimeout(timeout);
     }, [currentIndex, delay, text]); // add an infinite here if want to loop it
 
-    return <span className='text-white'>{currentText}</span>;
+    return <span className="text-white" dangerouslySetInnerHTML={{ __html: currentText }} style={{ whiteSpace: 'pre' }}/>
 };
 
 export default Typewriter;
