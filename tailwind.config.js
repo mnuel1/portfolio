@@ -16,6 +16,10 @@ export default {
             scrollBehavior: {
                 smooth: 'smooth',
             } ,
+            backgroundColor: {
+                'custom-hover-color': '#282e34',
+                'custom-bg-color': '#24292e',
+            },
         },
     },
     plugins: [],

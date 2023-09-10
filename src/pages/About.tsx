@@ -6,26 +6,7 @@ import '../css/tailwind.css';
 
 const About = ({ scrollTo }: {scrollTo:(section:number) => void}) => {
     
-    // const frontend = [
-    //     { title: 'React' },
-    //     { title: 'HTML' },
-    //     { title: 'Tailwind CSS' },
-    // ];
-      
-    // const backend = [
-    //     { title: 'PHP' },
-    //     { title: 'Node.js' }, 
     
-    // ];
-      
-    // const desktopapps = [
-    //     { title: 'C/C++' },
-    //     { title: 'Java' }, 
-    //     { title: 'Python' }, 
-    // ];
-    // const bg = {
-    //     backgroundColor:"#d9b854"
-    // }
     return (
         <>        
             <div className="px-7 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-8">            
@@ -42,30 +23,9 @@ const About = ({ scrollTo }: {scrollTo:(section:number) => void}) => {
                             <h1 className="text-xs"> Check my Bike! </h1>
                         </Button>
                     </div>
-                </div>
-                <div className="bg-gray-800 h-24 w-full relative">
-  {/* Create the stage */}
-  <div className="bg-yellow-400 h-8 w-full absolute bottom-0 left-0" />
-  
-  {/* Create stage columns */}
-  <div className="grid grid-cols-4 gap-2 p-2 relative">
-    <div className="bg-yellow-400 h-8 rounded-lg" />
-    <div className="bg-yellow-400 h-8 rounded-lg" />
-    <div className="bg-yellow-400 h-8 rounded-lg" />
-    <div className="bg-yellow-400 h-8 rounded-lg" />
-  </div>
-  
-  {/* Add some decorative elements */}
-  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-    <div className="bg-gray-700 h-4 w-4 rounded-full" />
-    <div className="bg-gray-700 h-4 w-4 rounded-full ml-2" />
-    <div className="bg-gray-700 h-4 w-4 rounded-full ml-2" />
-  </div>
-</div>
+                </div>               
                 
-            </div>
-            
-        
+        </div>        
         </>
     );
 }
