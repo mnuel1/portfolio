@@ -19,6 +19,10 @@ export default {
             backgroundColor: {
                 'custom-hover-color': '#282e34',
                 'custom-bg-color': '#24292e',
+                'root-color' : '#02010a',
+                'main-color' : '#04052e',
+                'sub-color' : '#140152',
+                'light-color' : '#22007c',
             },
         },
     },

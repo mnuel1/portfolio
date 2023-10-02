@@ -1,5 +1,5 @@
 import { lazy, useEffect, useRef, useState } from 'react';
-import { Parallax, ParallaxLayer, IParallax } from '@react-spring/parallax'
+import { IParallax } from '@react-spring/parallax'
 
 import Navbar from './layouts/navigation';
 
@@ -55,56 +55,23 @@ const App = () => {
 
     return (
         <>
-            <Navbar scrollTo={scrollTo} />
-            <Parallax ref={parallax} pages={5}>
-                <ParallaxLayer offset={0} speed={0} factor={5} style={{ backgroundColor: '#1f1f1f' }} />     
-                {/* <ParallaxLayer offset={1} speed={2} style={{ backgroundColor: '#5e616e' }} />
-                <ParallaxLayer offset={2} speed={2} style={{ backgroundColor: '#d0cfc8' }} /> */}
-
-
-                <ParallaxLayer offset={0} speed={0.2} //onClick={() => parallax.current.scrollTo(3)}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-
-                    <section id="home" className="element">
-                        <LazyHome />
-                    </section>
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={1} speed={0.2} 
-                // onClick={() => parallax.current.scrollTo(2)}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-
-                    <section id="about" className="element">
-                        <LazyAbout scrollTo={scrollTo}/>
-                    </section>
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={2} speed={0.2}                
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-                    <section id="work" className="element">
-                        <LazyWork />
-                    </section>
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={3} speed={0.2}
-                    // onClick={() => parallax.current.scrollTo(1)}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-
-                    <section id="contact" className="element">
-                        <LazyContact />
-                    </section>
-                </ParallaxLayer>
-
-                <ParallaxLayer offset={4} speed={0.2}
-                    // onClick={() => parallax.current.scrollTo(1)}
-                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', }} >
-
-                    <section id="footer" className="element">
-                        <LazyFooter />
-                    </section>
-                </ParallaxLayer>
-            
-            </Parallax>
+            <Navbar scrollTo={scrollTo} />            
+            <div className='flex items-center justify-center flex-col' id='bg'>        
+                <LazyContact />                     
+                <section id="home" className="element">
+                    <LazyHome />
+                </section>                        
+                <section id="about" className="element">
+                    <LazyAbout scrollTo={scrollTo}/>
+                </section>                                        
+                <section id="work" className="element">
+                    <LazyWork />
+                </section>
+                                       
+                <section id="footer" className="element">
+                    <LazyFooter />
+                </section>                                
+            </div> 
         </>
     );
 };

@@ -1,8 +1,8 @@
 import {useState} from 'react';
 
-import { Cross as Hamburger } from 'hamburger-react'
-import Switch from '../widgets/switch';
 
+
+import { BiLogoFacebook,BiLogoLinkedin,BiLogoGithub } from 'react-icons/bi'
 import '../css/tailwind.css'
 const Navbar = ({ scrollTo }: {scrollTo:(section:number) => void}) => {
 
@@ -34,15 +34,33 @@ const Navbar = ({ scrollTo }: {scrollTo:(section:number) => void}) => {
                 </ul>
             </div>
         </div>
-        <div className="flex px-10 lg:px-20 py-3 w-full gap-4 fixed z-50 justify-between drop-shadow-2xl" style={{backgroundColor:'#fdfdfc'}}>
+        <div className="flex flex-col border border-gray-600 backdrop-blur-3xl py-5 items-center h-full w-20 fixed z-50 justify-between drop-shadow-2xl" style={{backgroundColor:'#04052e'}}>
             <div className="w-16 h-17 flex items-center justify-center rounded-l-full hover:cursor-pointer" >                
                 <img src="src\assets\icon.png" className="w-1/2 md:w-11/12 lg:w-full"alt="icon" />
-                <h1 className="text-black text-md md:text-xl lg:text-2xl">man</h1>
+                
             </div>
-            <div className="flex items-center justify-center ">
-                <Hamburger rounded onToggle={toggleNavBar} color='black'/>                               
+            <div className="flex items-center flex-col gap-12">
+                
+            <a
+                href="https://www.facebook.com/manuel.marin.37669528"
+                className=" p-2 rounded-full transition-colors hover:bg-blue-500 ease-in-out duration-300"
+                >
+                <BiLogoFacebook className="text-2xl"/>
+            </a>
+            <a
+            href="https://www.linkedin.com/in/mnuelrin/"
+            className=" p-2 rounded-full transition-colors hover:bg-blue-900 ease-in-out duration-300"
+            >
+            <BiLogoLinkedin className="text-2xl"/>
+            </a>
+            <a
+            href="https://github.com/mnuel1"
+            className=" p-2 rounded-full transition-colors hover:bg-gray-800 ease-in-out duration-300"
+            >
+            <BiLogoGithub className="text-2xl"/>
+            </a>
             </div>        
-            <div className="flex items-center justify-center "><Switch/></div>
+            
         </div>
 
           
