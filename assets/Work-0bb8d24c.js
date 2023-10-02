@@ -1,4 +1,4 @@
-import{r as a,j as e}from"./index-e7bcd2e3.js";/* empty css                  */const h=({text:s,delay:l})=>{const[c,o]=a.useState(" "),[A,i]=a.useState(0);return a.useEffect(()=>{let t;return A<=s.length-1&&(t=setTimeout(()=>{s[A]===`
+import{r as a,j as e}from"./index-13aa7610.js";/* empty css                  */const h=({text:s,delay:l})=>{const[c,o]=a.useState(" "),[A,i]=a.useState(0);return a.useEffect(()=>{let t;return A<=s.length-1&&(t=setTimeout(()=>{s[A]===`
 `?o(r=>r+"<br />"):s[A]==="	"?o(r=>r+"	"):o(r=>r+s[A]),i(r=>r+1)},l)),()=>clearTimeout(t)},[A,l,s]),e.jsx("span",{className:"text-white",dangerouslySetInnerHTML:{__html:c},style:{whiteSpace:"pre"}})},g=()=>{const[s]=a.useState(0),l=`Hi, I'm Manuel Marin! 👋
 
  I am a developer based in the Philippines. Currently, I am:
