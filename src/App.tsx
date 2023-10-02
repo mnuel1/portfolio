@@ -55,8 +55,9 @@ const App = () => {
 
     return (
         <>
+           
             <Navbar scrollTo={scrollTo} />            
-            <div className='flex items-center justify-center flex-col' id='bg'>        
+            <div className='flex items-center justify-center flex-col z-10' id='bg'>     
                 <LazyContact />                     
                 <section id="home" className="element">
                     <LazyHome />
@@ -67,11 +68,13 @@ const App = () => {
                 <section id="work" className="element">
                     <LazyWork />
                 </section>
-                                       
+                                    
                 <section id="footer" className="element">
                     <LazyFooter />
                 </section>                                
             </div> 
+                 
+            
         </>
     );
 };

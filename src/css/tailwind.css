@@ -83,7 +83,17 @@
 #bg {
   background-color: #02010a;
   opacity: 1;
-  background-image:  radial-gradient(#140152 2px, transparent 2px), radial-gradient(#140152 2px, #02010a 2px);
+  background-image: radial-gradient(#140152 2px, transparent 2px), radial-gradient(#140152 2px, #02010a 2px);
   background-size: 80px 80px;
-  background-position: 0 0,40px 40px;
+  background-position: 0 0, 40px 40px;
+  animation: moveBackground 5s linear infinite;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0, 40px 40px;
+  }
+  100% {
+    background-position: 80px 80px, 120px 120px;
+  }
 }

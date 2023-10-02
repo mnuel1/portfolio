@@ -13,3 +13,28 @@
   .animate-enter {
     animation: enterAnimation 1s ease-in-out; /* Adjust duration and easing as needed */
   }
+
+
+
+  @keyframes moveDown {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100vh); /* Adjust this value to control how far it moves */
+    }
+  }
+
+  @keyframes changeCharacter {
+    0%, 100% {
+      content: attr(data-random-char);
+    }
+    50% {
+      content: attr(data-target-char);
+    }
+  }
+  
+  .random-character {
+    animation: changeCharacter 0.1s linear infinite;
+  }
+  

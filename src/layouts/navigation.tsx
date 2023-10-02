@@ -34,7 +34,7 @@ const Navbar = ({ scrollTo }: {scrollTo:(section:number) => void}) => {
                 </ul>
             </div>
         </div>
-        <div className="flex flex-col border border-gray-600 backdrop-blur-3xl py-5 items-center h-full w-20 fixed z-50 justify-between drop-shadow-2xl" style={{backgroundColor:'#04052e'}}>
+        <div className="flex flex-col py-5 items-center h-full w-20 fixed z-50 justify-between drop-shadow-2xl bg-root-color">
             <div className="w-16 h-17 flex items-center justify-center rounded-l-full hover:cursor-pointer" >                
                 <img src="src\assets\icon.png" className="w-1/2 md:w-11/12 lg:w-full"alt="icon" />
                 

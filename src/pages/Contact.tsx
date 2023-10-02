@@ -34,13 +34,13 @@ function Contact() {
     return (
         <div className="fixed bottom-0 w-4/12 shadow-lg z-50 border border-gray-600 rounded-md bg-main-color">
             <button
-                className="flex justify-between w-full py-4 px-6 text-center border-b border-gray-600  color-black"
+                className="flex justify-between w-full py-4 px-6 text-center border-b border-gray-600 color-black text-sm"
                 onClick={toggleAccordion}
             >
                 Contact Me
                 <div className="flex gap-2">
-                    <p>Spaces: 2</p>
-                    <p>UTF-8</p>
+                    <p className='text-sm'>Spaces: 2</p>
+                    <p className='text-sm'>UTF-8</p>
                     {/* <Icon id={1} open={isOpen}></Icon> */}
                 </div>
             </button>
