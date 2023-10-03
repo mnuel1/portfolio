@@ -1,4 +1,4 @@
-import { Typography } from "@material-tailwind/react";
+
 import loadTransition from '../widgets/loadTransition';
 import LetterBox from "../widgets/letterBox";
 import '../css/tailwind.css'

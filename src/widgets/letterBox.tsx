@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  { useState, useEffect } from 'react';
 import '../css/animation.css';
 
 const numRows = 3;
@@ -14,7 +14,7 @@ function getRandomChar() {
 function LetterBox() {
   const hero = 'Your friendly developer';
 
-  const letters = hero.split('');
+  
   const [characters, setCharacters] = useState(Array.from({ length: totalBoxes }, () => getRandomChar()));
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animationFinished, setAnimationFinished] = useState(false);
