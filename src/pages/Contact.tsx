@@ -32,7 +32,7 @@ function Contact() {
       
 
     return (
-        <div className="fixed bottom-0 w-4/12 shadow-lg z-50 border border-gray-600 rounded-md bg-main-color">
+        <div className="fixed hidden md:block bottom-0 w-4/12 shadow-lg z-50 border border-gray-600 rounded-md bg-main-color">
             <button
                 className="flex justify-between w-full py-4 px-6 text-center border-b border-gray-600 color-black text-sm"
                 onClick={toggleAccordion}
