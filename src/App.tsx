@@ -1,78 +1,82 @@
-import { lazy, useEffect, useRef, useState } from 'react';
-import { IParallax } from '@react-spring/parallax'
-
+import { useState, useEffect } from 'react';
 import Navbar from './layouts/navigation';
+import Home from './pages/Home';
+import About from './pages/About';
+import Work from './pages/Work';
+import Contact from './pages/Contact';
 
-// Import the correct components for each section
-const LazyHome = lazy(() => import('./pages/Home'));
-const LazyAbout = lazy(() => import('./pages/About'));
-const LazyWork = lazy(() => import('./pages/Work'));
-const LazyContact = lazy(() => import('./pages/Contact'));
-const LazyFooter = lazy(() => import('./pages/Footer'));
+import { BiLogoFacebook,BiLogoLinkedin,BiLogoGithub } from 'react-icons/bi'
 
 import './css/tailwind.css';
 
 const App = () => {
     
-    const parallax = useRef<IParallax>(null!);
+    const [activePage, setActivePage] = useState('0');    
 
-    const scrollTo = (section: number) => {
-        parallax.current.scrollTo(section);
-        
-        
-    };
-
-    const [activeSection, setActiveSection] = useState('home');
-
-    // Track scroll position
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollY = parallax.current.current;
-            // Determine which section is in view based on scroll position
-            if (scrollY === 0) {
-                setActiveSection('home');
-            } else if (scrollY === 1) {
-                setActiveSection('about');
-            } else if (scrollY === 2) {
-                setActiveSection('work');
-            } else if (scrollY === 3) {
-                setActiveSection('contact');
-            } else {
-                setActiveSection('footer');
-            }
-            
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        
-        
-        return () => {
-            console.log(activeSection);
-            window.removeEventListener('scroll', handleScroll);
-            
-        };
-    }, [parallax]);
-
+    let pageContent;
+ 
+    switch (activePage) {
+        case '0':
+            pageContent = <About />;
+            break;
+        case '1':
+            pageContent = <Work />;
+            break;
+        case '2':
+            pageContent = <Contact />;
+            break;
+        default:            
+            pageContent = <About />;
+    }
+    
     return (
-        <>
-           
-            <Navbar scrollTo={scrollTo} />            
-            <div className='flex items-center justify-center flex-col z-10' id='bg'>     
-                <LazyContact />                     
-                <section id="home" className="element">
-                    <LazyHome />
-                </section>                        
-                <section id="about" className="element">
-                    <LazyAbout scrollTo={scrollTo}/>
-                </section>                                        
-                <section id="work" className="element">
-                    <LazyWork />
-                </section>
-                                    
-                <section id="footer" className="element">
-                    <LazyFooter />
-                </section>                                
+        <>                       
+            <div className='flex items-center justify-center flex-col z-10' id='bg'>               
+                <div className='h-screen flex justify-center flex-col'>
+                    <div className='grid grid-cols-2'>
+                        <div className='col-span-2 mb-4'>
+                            <Home />                            
+                        </div>
+                        
+                        <div className='flex justify-center items-center col-span-2 mb-4 '>
+                            <div className='col-span-1 border-r mb-4 '>
+                                <Navbar setActivePage={setActivePage} />
+                            </div>
+                            <div className='col-span-1 p-2 w-1/2'>
+                                <div className='flex justify-center items-center p-2 '>
+                                    {pageContent}
+                                </div>
+                            </div>
+                        </div>
+                        <div className='col-span-2'>
+                            
+                            <div className='flex justify-center items-center p-4 flex-col'>
+                                
+
+                                <h5>If you have a project in mind and would like me to participate, let's get in touch.</h5>
+                                <div className='flex gap-2 mt-4'>
+                                    <a href="https://www.facebook.com/manuel.marin.37669528" className=" p-2 rounded-full transition-colors hover:bg-blue-500 ease-in-out duration-300" >
+                                        <BiLogoFacebook className="text-2xl"/>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/mnuelrin/" className=" p-2 rounded-full transition-colors hover:bg-blue-900 ease-in-out duration-300">
+                                        <BiLogoLinkedin className="text-2xl"/>
+                                    </a>
+                                    <a href="https://github.com/mnuel1" className=" p-2 rounded-full transition-colors hover:bg-gray-800 ease-in-out duration-300">
+                                        <BiLogoGithub className="text-2xl"/>
+                                    </a>
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                
+
+                </div>
             </div> 
+
+           
+           
+           
                  
             
         </>
