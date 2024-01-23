@@ -9,10 +9,10 @@ const Navbar = ({ setActivePage } : { setActivePage: (value: string) => void }, 
     return (
 
         <>
-            <div className='flex flex-col gap-4 p-4'>
-                <a className='text-3xl cursor-pointer' onClick={() => handleClick('0')}> {'->'} About</a>
-                <a className='text-3xl cursor-pointer' onClick={() => handleClick('1')}> {'->'} Work</a>            
-                <a className='text-3xl cursor-pointer' onClick={() => handleClick('2')}> {'->'} Contact</a>
+            <div className='hidden md:flex flex-col gap-4 p-4'>
+                <a className='text-sm md:text-3xl cursor-pointer' onClick={() => handleClick('0')}> {'->'} About</a>
+                <a className='text-sm md:text-3xl cursor-pointer' onClick={() => handleClick('1')}> {'->'} Work</a>            
+                <a className='text-sm md:text-3xl cursor-pointer' onClick={() => handleClick('2')}> {'->'} Contact</a>
             </div>
                     
             

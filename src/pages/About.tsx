@@ -5,7 +5,7 @@ function About() {
 
     
     return (
-        <div className='text-justify p-4 text-xl bg-gray-900 border border-gray-600 rounded-md '>
+        <div className='text-justify p-4 text-sm md:text-xl bg-gray-900 border border-gray-600 rounded-md '>
             
             I am a developer who has recently been working in web and mobile development, 
             providing me with a solid foundation in both fields of development.

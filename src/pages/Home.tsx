@@ -7,7 +7,7 @@ const Home = () => {
     return (
                 
        <div className='flex justify-center items-center p-4'>
-            <h1 className='text-5xl'>I'm Manuel, I can do your apps</h1>
+            <h1 className='text-xl text-center md:text-5xl'>I'm Manuel, I can do your apps</h1>
        </div>
             
       

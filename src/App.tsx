@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Navbar from './layouts/navigation';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -42,7 +42,7 @@ const App = () => {
                             <div className='col-span-1 border-r mb-4 '>
                                 <Navbar setActivePage={setActivePage} />
                             </div>
-                            <div className='col-span-1 p-2 w-1/2'>
+                            <div className='col-span-1 p-2 w-full md:w-1/2'>
                                 <div className='flex justify-center items-center p-2 '>
                                     {pageContent}
                                 </div>
@@ -50,10 +50,10 @@ const App = () => {
                         </div>
                         <div className='col-span-2'>
                             
-                            <div className='flex justify-center items-center p-4 flex-col'>
+                            <div className='flex justify-center items-center p-4 flex-col '>
                                 
 
-                                <h5>If you have a project in mind and would like me to participate, let's get in touch.</h5>
+                                <h5 className='text-center'>If you have a project in mind and would like me to participate, let's get in touch.</h5>
                                 <div className='flex gap-2 mt-4'>
                                     <a href="https://www.facebook.com/manuel.marin.37669528" className=" p-2 rounded-full transition-colors hover:bg-blue-500 ease-in-out duration-300" >
                                         <BiLogoFacebook className="text-2xl"/>
