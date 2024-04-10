@@ -20,7 +20,8 @@ const workBox = [
         add: 'Developed with my colleagues',
         role: 'Fullstack Developer',
         techstack: 'HTML/CSS, React Native, Express.js, PostgreSQL',
-        image: pa        
+        image: pa,
+        link: "https://github.com/mnuel1/PA-Backend"
     },
     { 
         id: 2,
@@ -29,7 +30,8 @@ const workBox = [
         add: 'Developed with my colleagues',
         role: 'Backend Developer',
         techstack: 'HTML/TailwindCSS, Electron.js, Python',
-        image: d3xtra
+        image: d3xtra,
+        link: "https://github.com/mnuel1/paths"
     },
     { 
         id: 3,
@@ -39,7 +41,8 @@ const workBox = [
         add: 'Developed with my colleague',
         role: 'Backend Developer',
         techstack: 'HTML/TailwindCSS, React.js Express.js, MySQL',
-        image: recipe
+        image: recipe,
+        link: "https://github.com/mnuel1/recipe"
     },
     { 
         id: 4,  
@@ -49,7 +52,8 @@ const workBox = [
         add: 'Developed with my colleagues',
         role: 'Fullstack Developer',
         techstack: 'HTML/CSS, PHP, MySQL',
-        image: pos
+        image: pos,
+        link: "https://github.com/mnuel1/RESIBO-REACT"
     },
     { 
         id: 5,
@@ -60,7 +64,8 @@ const workBox = [
         add: 'Developed this with myself',
         role: 'Fullstack Developer',
         techstack: 'Java/Kotlin , XML, SQLite',
-        image: sos
+        image: sos,
+        link:"https://github.com/mnuel1/sos"
     },
     { 
         id: 6,
@@ -70,7 +75,8 @@ const workBox = [
         add: 'Developed with my colleague',
         role: 'Fullstack Developer',
         techstack: 'Python, Flutter, Dart',
-        image: skin
+        image: skin,
+        link: "https://github.com/mnuel1/skin-disease-detection-app"
     },
     { 
         id: 7,
@@ -81,7 +87,8 @@ const workBox = [
         add: 'Developed this with myself',
         role: 'Fullstack Developer',
         techstack: 'PHP/Laravel, HTML/TailwindCSS/React.js, MySQL',
-        image: tas
+        image: tas,
+        link: "https://github.com/mnuel1/TAS"
     },
     
     { 
@@ -91,7 +98,8 @@ const workBox = [
         add: 'Developed this with myself',
         role: 'Fullstack Developer',
         techstack: 'C++ with QT Framework',
-        image: ''
+        image: '',
+        link: "https://github.com/mnuel1/To-Do-App"
     },
     
     // Add more boxes as needed
@@ -118,8 +126,11 @@ const Work = () => {
         <div className='flex flex-col gap-6 p-6'>
             <h1 className='text-xl md:text-xl'> Recent Works </h1>
             <div className="flex gap-4">
-                {currentItems.map((items, index) => (                    
-                    <WorkCard key={index} workCardProps={items} />
+                
+                {currentItems.map((items, index) => (
+                    <a href={items.link}>
+                        <WorkCard key={index} workCardProps={items} />                    
+                    </a>
                 ))}            
             </div>
             <div className="flex justify-center mt-4">
