@@ -1,40 +1,40 @@
-/* Add this to your CSS stylesheet */
+
 @keyframes enterAnimation {
-    0% {
-      opacity: 0;
-      transform: translateY(-20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
   
   .animate-enter {
-    animation: enterAnimation 1s ease-in-out; /* Adjust duration and easing as needed */
+    animation: enterAnimation 1s ease-in-out; 
   }
 
+@keyframes walk {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  50%{
+    transform: translateX(calc(-100% - 250px)) scaleX(1);
+  }
+  100% {
+    transform: translateX(0) scaleX(-1);
+  }
+}
 
 
-  @keyframes moveDown {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(100vh); /* Adjust this value to control how far it moves */
-    }
+@keyframes moveDown {
+  0% {
+    transform: translateY(0);
   }
+  100% {
+    transform: translateY(100vh); 
+  }
+}
 
-  @keyframes changeCharacter {
-    0%, 100% {
-      content: attr(data-random-char);
-    }
-    50% {
-      content: attr(data-target-char);
-    }
-  }
-  
-  .random-character {
-    animation: changeCharacter 0.1s linear infinite;
-  }
+
   

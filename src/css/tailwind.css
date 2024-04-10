@@ -2,23 +2,22 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@600&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
 
-/* COLOR PALLETE */
-:root {
-    --text: #1c1b17;
-    --background: #fdfdfc;
-    --primary:#6e7281;
-    --secondary:#d0cfc8;
-    --accent:#5e616e;
-}
 * {
-    font-family: 'Poppins', sans-serif;
-    font-family: 'Roboto Mono', monospace;
-    color: white;
-
-        
+    font-family: "JetBrains Mono", monospace;
+    color: #fdfdfc;        
+}
+.duck {
+  position: absolute;
+  bottom: 0;
+  right: 0; 
+  width: 25px; 
+  height: 25px; 
+  background-image: url('https://emojicdn.elk.sh/🦆');
+  background-size: contain;
+  animation: walk 10s ease-in-out infinite;
 }
 
 /* Hide default scrollbars */
@@ -67,10 +66,10 @@
 #bg {
   background-color: #02010a;
   opacity: 1;
-  background-image: radial-gradient(#140152 2px, transparent 2px), radial-gradient(#140152 2px, #02010a 2px);
+  background-image: radial-gradient(#333456 2px, transparent 2px), radial-gradient(#333456 2px, #02010a 2px);
   background-size: 80px 80px;
   background-position: 0 0, 40px 40px;
-  animation: moveBackground 5s linear infinite;
+  /* animation: moveBackground 5s linear infinite; */
 }
 
 @keyframes moveBackground {
