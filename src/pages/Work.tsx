@@ -6,9 +6,9 @@ import '../css/animation.css'
 
 import pa from '../../public/Prod App.jpg'
 import pos from '../../public/pos.png'
-import sos from '../../public/sos.jpg'
-import skin from '../../public/skin.png'
-import tas from '../../public/tas.png'
+// import sos from '../../public/sos.jpg'
+// import skin from '../../public/skin.png'
+// import tas from '../../public/tas.png'
 import recipe from '../../public/recipe website.jpg'
 import d3xtra from '../../public/dextra1.jpg'
 
@@ -55,52 +55,52 @@ const workBox = [
         image: pos,
         link: "https://github.com/mnuel1/RESIBO-REACT"
     },
-    { 
-        id: 5,
-        title: 'SOS', 
-        description: `This mobile application, developed as a school project for my client, revolves around assisting motorists. 
-        Its concept enables users to seek help from mechanics, view the mechanics' locations, 
-        and promptly share their own locations for swift assistance.`,
-        add: 'Developed this with myself',
-        role: 'Fullstack Developer',
-        techstack: 'Java/Kotlin , XML, SQLite',
-        image: sos,
-        link:"https://github.com/mnuel1/sos"
-    },
-    { 
-        id: 6,
-        title: 'Skin Disease Detection', 
-        description: `This mobile application, developed as our school project. We utilize machine learning
-        to build an AI that can identify 7 classes of diseases.`,
-        add: 'Developed with my colleague',
-        role: 'Fullstack Developer',
-        techstack: 'Python, Flutter, Dart',
-        image: skin,
-        link: "https://github.com/mnuel1/skin-disease-detection-app"
-    },
-    { 
-        id: 7,
-        title: 'Transportation Appointment System', 
-        description: `This web application, created as part of a school project for a client, 
-        focuses on a unique concept—an appointment system designed 
-        exclusively for vehicle services within a specific barangay.`,
-        add: 'Developed this with myself',
-        role: 'Fullstack Developer',
-        techstack: 'PHP/Laravel, HTML/TailwindCSS/React.js, MySQL',
-        image: tas,
-        link: "https://github.com/mnuel1/TAS"
-    },
+    // { 
+    //     id: 5,
+    //     title: 'SOS', 
+    //     description: `This mobile application, developed as a school project for my client, revolves around assisting motorists. 
+    //     Its concept enables users to seek help from mechanics, view the mechanics' locations, 
+    //     and promptly share their own locations for swift assistance.`,
+    //     add: 'Developed this with myself',
+    //     role: 'Fullstack Developer',
+    //     techstack: 'Java/Kotlin , XML, SQLite',
+    //     image: "",
+    //     link:"https://github.com/mnuel1/sos"
+    // },
+    // { 
+    //     id: 6,
+    //     title: 'Skin Disease Detection', 
+    //     description: `This mobile application, developed as our school project. We utilize machine learning
+    //     to build an AI that can identify 7 classes of diseases.`,
+    //     add: 'Developed with my colleague',
+    //     role: 'Fullstack Developer',
+    //     techstack: 'Python, Flutter, Dart',
+    //     image: "",
+    //     link: "https://github.com/mnuel1/skin-disease-detection-app"
+    // },
+    // { 
+    //     id: 7,
+    //     title: 'Transportation Appointment System', 
+    //     description: `This web application, created as part of a school project for a client, 
+    //     focuses on a unique concept—an appointment system designed 
+    //     exclusively for vehicle services within a specific barangay.`,
+    //     add: 'Developed this with myself',
+    //     role: 'Fullstack Developer',
+    //     techstack: 'PHP/Laravel, HTML/TailwindCSS/React.js, MySQL',
+    //     image: "",
+    //     link: "https://github.com/mnuel1/TAS"
+    // },
     
-    { 
-        id: 8,
-        title: 'Todo', 
-        description: "A desktop application that can manage your to-do. A clone of microsoft todo desktop app.",
-        add: 'Developed this with myself',
-        role: 'Fullstack Developer',
-        techstack: 'C++ with QT Framework',
-        image: '',
-        link: "https://github.com/mnuel1/To-Do-App"
-    },
+    // { 
+    //     id: 8,
+    //     title: 'Todo', 
+    //     description: "A desktop application that can manage your to-do. A clone of microsoft todo desktop app.",
+    //     add: 'Developed this with myself',
+    //     role: 'Fullstack Developer',
+    //     techstack: 'C++ with QT Framework',
+    //     image: '',
+    //     link: "https://github.com/mnuel1/To-Do-App"
+    // },
     
     // Add more boxes as needed
 ];
@@ -108,7 +108,6 @@ const workBox = [
 
 const Work = () => {
     const [currentPage, setCurrentPage] = useState<number>(1);
-
 
     const itemsPerPage = 4;
     const totalPages = Math.ceil(workBox.length / itemsPerPage);
@@ -123,9 +122,9 @@ const Work = () => {
    
     return (
 
-        <div className='flex flex-col gap-6 p-6'>
+        <div className='flex flex-col gap-6 p-6 w-full h-fit'>
             <h1 className='text-xl md:text-xl'> Recent Works </h1>
-            <div className="flex gap-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
                 
                 {currentItems.map((items, index) => (
                     <a href={items.link}>

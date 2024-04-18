@@ -13,11 +13,11 @@ interface WorkCardProps {
 export const WorkCard: React.FC<{ workCardProps: WorkCardProps }> = ({ workCardProps }) => {
     return (
         
-        <div className="box-content h-[450px] w-[400px] overflow-hidden inline-block text-[white] relative bg-[white] 
+        <div className="box-content md:w-full md:h-full overflow-hidden inline-block text-[white] relative bg-[white] 
         group hover:cursor-pointer hover:scale-110 hover:z-50 transition-all duration-300 ease-in-out">
-            <img src={workCardProps.image} alt="" 
-                className="h-[450px] w-[400px] transition-transform duration-300 ease-in-out " />
-            <div className="h-[450px] w-[400px] bg-[rgba(0,0,0,0)] absolute transition-[background-color] 
+            <img src={workCardProps.image} alt={`image ${workCardProps.title}`} 
+                className="md:w-full md:h-full transition-transform duration-300 ease-in-out " />
+            <div className="md:w-full md:h-full bg-[rgba(0,0,0,0)] absolute transition-[background-color] 
                 duration-300 ease-in-out left-0 top-0 group-hover:bg-[rgba(0,0,0,0.9)]"
             >
                 <p className="text-[#ff8cc2] text-center mt-4 opacity-0 group-hover:opacity-100 ">{workCardProps.techstack}</p>
