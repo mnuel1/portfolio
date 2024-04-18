@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { WorkCard } from '../widgets/cards';
 
+import { BiLogoFacebook, BiLogoLinkedin, BiLogoGithub } from 'react-icons/bi'
+
 import '../css/tailwind.css'
 import '../css/animation.css'
 
@@ -124,6 +126,14 @@ const Work = () => {
 
         <div className='flex flex-col gap-6 p-6 w-full h-fit'>
             <h1 className='text-xl md:text-xl'> Recent Works </h1>
+            {/* <div className='flex gap-4'>
+                <button className='bg-[#F4ABC4] hover:bg-[#b84b7e] p-2 rounded-md text-[#060930] transition 
+                    duration-300 ease-in-out transform hover:scale-105'>All</button>
+                <button className='bg-[#F4ABC4] hover:bg-[#b84b7e] p-2 rounded-md text-[#060930] transition 
+                    duration-300 ease-in-out transform hover:scale-105'>Full Stack</button>
+                <button className='bg-[#F4ABC4] hover:bg-[#b84b7e] p-2 rounded-md text-[#060930] transition 
+                    duration-300 ease-in-out transform hover:scale-105'>Backend</button>
+            </div> */}
             <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
                 
                 {currentItems.map((items, index) => (
@@ -144,6 +154,25 @@ const Work = () => {
                         {/* {i + 1} */}
                     </button>
                 ))}
+            </div>
+            <div className='mt-4 row-span-1'>
+                <div className='bg-[#02020A] flex flex-col justify-evenly items-center p-2'>
+                    <h5 className='text-center'>If you have a project in mind and would like me to participate, let's get in touch.</h5>
+                    <div className='flex justify-center items-center gap-2 mr-12'>
+                        <a href="https://www.facebook.com/manuel.marin.37669528" className="group p-2 rounded-full 
+                            transition-colors hover:bg-blue-500 ease-in-out duration-300" >
+                            <BiLogoFacebook className="text-2xl bg-[#02010A] group-hover:bg-blue-500"/>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mnuelrin/" className="group p-2 rounded-full 
+                        transition-colors hover:bg-blue-900 ease-in-out duration-300">
+                            <BiLogoLinkedin className="text-2xl bg-[#02010A] group-hover:bg-blue-900"/>
+                        </a>
+                        <a href="https://github.com/mnuel1" className="group p-2 rounded-full 
+                        transition-colors hover:bg-gray-800 ease-in-out duration-300">
+                            <BiLogoGithub className="text-2xl bg-[#02010A] group-hover:bg-gray-800"/>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
         

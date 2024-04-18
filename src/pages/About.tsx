@@ -29,11 +29,7 @@ function About() {
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=mnuelmrin21@gmail.com&su=subject&body=body">
                     <button className="mt-2 ml-2 sm:ml-4 border border-[#F4ABC4] hover:border-[#b84b7e] hover:bg-[#b84b7e] p-2 rounded-md transition 
                     duration-300 ease-in-out transform hover:scale-105 md:w-[17%]">Contact Me</button>
-                </a>
-            
-            
-
-                          
+                </a>             
         </div>
         
         
