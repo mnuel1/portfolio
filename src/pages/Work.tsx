@@ -134,7 +134,7 @@ const Work = () => {
                 <button className='bg-[#F4ABC4] hover:bg-[#b84b7e] p-2 rounded-md text-[#060930] transition 
                     duration-300 ease-in-out transform hover:scale-105'>Backend</button>
             </div> */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4">
+            <div className="grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 gap-2">
                 
                 {currentItems.map((items, index) => (
                     <a href={items.link}>
@@ -156,9 +156,9 @@ const Work = () => {
                 ))}
             </div>
             <div className='mt-4 row-span-1'>
-                <div className='bg-[#02020A] flex flex-col justify-evenly items-center p-2'>
+                <div className='bg-[#02020A] flex flex-col justify-center items-center p-2'>
                     <h5 className='text-center'>If you have a project in mind and would like me to participate, let's get in touch.</h5>
-                    <div className='flex justify-center items-center gap-2 mr-12'>
+                    <div className='flex justify-center items-center gap-2 '>
                         <a href="https://www.facebook.com/manuel.marin.37669528" className="group p-2 rounded-full 
                             transition-colors hover:bg-blue-500 ease-in-out duration-300" >
                             <BiLogoFacebook className="text-2xl bg-[#02010A] group-hover:bg-blue-500"/>
