@@ -13,6 +13,8 @@ import pos from '../../public/pos.png'
 // import tas from '../../public/tas.png'
 import recipe from '../../public/recipe website.jpg'
 import d3xtra from '../../public/dextra1.jpg'
+import ai from '../../public/ai.png'
+import automata from '../../public/automata.png'
 
 const workBox = [
     {   
@@ -56,6 +58,29 @@ const workBox = [
         techstack: 'HTML/CSS, PHP, MySQL',
         image: pos,
         link: "https://github.com/mnuel1/RESIBO-REACT"
+    },
+    { 
+        id: 5,  
+        title: 'TUP Navigation', 
+        description: `This mobile application is developed to help both new/old students in navigating 
+        and pinpointing specific rooms or buildings at TUP, similar to Google Maps but specific for campus 
+        environments, utilizing an AI algorithm known as Ant Colony Optimization for pathfinding`,
+        add: '',
+        role: 'Fullstack Developer',
+        techstack: 'React Native (Expo Go), Python',
+        image: ai,
+        link: "https://github.com/mnuel1/tup-navigation"
+    },
+    { 
+        id: 6,  
+        title: 'Personal Virtual assistant', 
+        description: `A straightforward chatbot designed to assist with basic tasks, akin to Siri and other personal assistants, 
+        though with limited functionalities.`,
+        add: '',
+        role: 'Fullstack Developer',
+        techstack: 'Electron JS, Python',
+        image: automata,
+        link: "https://github.com/mnuel1/va-automata"
     },
     // { 
     //     id: 5,
