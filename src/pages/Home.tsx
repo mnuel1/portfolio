@@ -1,40 +1,64 @@
-
-import '../css/tailwind.css'
-import '../css/animation.css'
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import About from './About';
-
+import MotionWrapper from '../components/motion';
+const hero = [
+  "full stack developer",
+  "backend developer",
+  "no code developer",
+  "automation",
+  "travel",
+  "bikes"
+];
 
 const Home = () => {
-    
-    return (
-        <>
-            <div className='flex relative justify-center flex-col lg:flex-row items-center h-full gap-2'>
-               
-                <div className='flex flex-col h-full justify-center'>
-                    <About/>
-                </div>
-                <div className='flex lg:items-center lg:justify-center flex-col h-full w-full lg:w-[30%] gap-6 my-6 '>
-                    <h1 className='text-xl italic text-center'>"You can't rise if you don't stand"
-                        <h3 className='text-sm mt-2 text-right font-semibold'> - useless quote from me</h3>
-                    </h1>
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-                    <div className='flex justify-center items-center gap-2'>
-                        <img src="https://media1.tenor.com/m/8Q08-FYEIfcAAAAC/duck.gif" alt="" width={100}/>
-                        <p className='text-center text-[#f4abc4]'>dancing duck.</p>
-                    </div>
-                </div>
-                
-                <div className='border-t-2 border-dashed w-full absolute bottom-[-10px]'></div>
-            </div>
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % hero.length);
+    }, 5000);
 
+    return () => clearInterval(interval);
+  }, []);
 
-            
+  return (
+    <>
+      <div
+        className='flex relative justify-end 
+        flex-col items-center h-[500px] gap-2'
+      >
+        
+        <div className='h-[90px] text-center overflow-hidden mb-24'>
+            <AnimatePresence>
+                <motion.h1
+                    key={hero[currentIndex]}
+                    className='text-4xl md:text-8xl header '
+                    initial={{ opacity: 0, rotateX: 90 }}
+                    animate={{
+                        opacity: 1,
+                        rotateX: 0,                    
+                    }}
+                    exit={{ opacity: 0, rotateX: -90 }}
+                    transition={{
+                        duration: 1,
+                        ease: "easeInOut",
+                        scale: { type: "spring", stiffness: 300 },
+                    }}
+                    >
+                    {hero[currentIndex].toUpperCase()}
+                </motion.h1>
+            </AnimatePresence>
+        </div>
 
-            
-        </>
-            
-      
-    );
+        <div className='flex-end'>
+            <MotionWrapper id='about'>
+                <About />
+            </MotionWrapper>
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default Home;
