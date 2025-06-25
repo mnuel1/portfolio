@@ -93,7 +93,7 @@ export const workData = [
         title: 'Career City', 
         techstack: 'HTML/CSS, PHP, MYSQL',
         image: none,
-        link: "https://careercity.online/index.php",
+        link: "https://github.com/mnuel1/jobportal",
         type: "client"
     },
     { 
@@ -101,7 +101,7 @@ export const workData = [
         title: 'Quiz be with you', 
         techstack: 'React/Typescript, Supabase, Python',
         image: none,
-        link: "https://www.quizbeewithyou.online/",
+        link: "https://edu-quest-web-system.vercel.app/",
         type: "client"
     },
     { 
@@ -109,7 +109,7 @@ export const workData = [
         title: 'Act Classroom', 
         techstack: 'React/Typescript, Express JS, MySQL',
         image: none,
-        link: "https://actsclassroom.online/",
+        link: "https://github.com/mnuel1/gclass",
         type: "client"
     },
     
